@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="d-flex flex-column w-100 gap-4 mb-4">
+        <div class="border border-dark p-4">
+            <h2 class="h4">canActivate</h2>
+            <div class="checkbox-wrapper">
+                <input #canActivateSwitch type="checkbox" class="checkbox" [checked]="canActivate"
+                    (change)="canActivateChange(canActivateSwitch.checked)" id="canActivateSwitch" />
+                Off <label for="canActivateSwitch" class="toggle"></label> On
+                <p class="m-0">&#9001;-- Toggle canActivate guard of "Main Page"</p>
+            </div>
+            <hr />
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-success" routerLink='/'>
+                    Proceed to mainpage
+                </a>
+                <a class="btn btn-success" routerLink="/animations">
+                    Proceed to animations
+                </a>
+            </div>
+        </div>
+
+        <div class="border border-dark p-4">
+            <h2 class="h4">canDeactivate</h2>
+            <div class="checkbox-wrapper">
+                <input #canDeactivateSwitch type="checkbox" class="checkbox" [checked]="canDeactivate"
+                    (change)="canDeactivateChange(canDeactivateSwitch.checked)" id="canDeactivateSwitch" />
+                Off <label for="canDeactivateSwitch" class="toggle"></label> On
+                <p class="m-0">&#9001;-- Toggle canDeactivate guard of "Angular routing"</p>
+            </div>
+            <hr />
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-success" routerLink='/'>
+                    Proceed to mainpage
+                </a>
+                <a class="btn btn-success" routerLink="/animations">
+                    Proceed to animations
+                </a>
+            </div>
+        </div>
+
+        <div class="border border-dark p-4">
+            <h2 class="h4">canActivateChild</h2>
+            <div class="checkbox-wrapper">
+                <input #canActivateChildSwitch type="checkbox" class="checkbox" [checked]="canActivateChild"
+                    (change)="canActivateChildChange(canActivateChildSwitch.checked)" id="canActivateChildSwitch" />
+                Off <label for="canActivateChildSwitch" class="toggle"></label> On
+                <p class="m-0">&#9001;-- Toggle canActivateChild guard of "Angular routing"</p>
+            </div>
+            <hr />
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-success" routerLink='routeChild'>
+                    Proceed to route child
+                </a>
+            </div>
+        </div>
+
+        <div class="border border-dark p-4">
+            <h2 class="h4">canLoad</h2>
+            <div class="checkbox-wrapper">
+                <input #canLoadSwitch type="checkbox" class="checkbox" [checked]="canLoad"
+                    (change)="canLoadChange(canLoadSwitch.checked)" id="canLoadSwitch" />
+                Off <label for="canLoadSwitch" class="toggle"></label> On
+                <p class="m-0">&#9001;-- Toggle canLoad guard of "Welcome" module</p>
+            </div>
+            <hr />
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-success" routerLink='/welcome'>
+                    Load Welcome Module
+                </a>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

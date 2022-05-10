@@ -1,0 +1,22 @@
+<header class="bg-black">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark mb-3">
+            <button class="navbar-toggler ms-auto" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                &#9776;
+            </button>
+            <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item" *ngFor="let item of headerLinks">
+                        <a class="nav-link text-white" 
+                        [routerLink]="item.path"
+                        routerLinkActive="text-decoration-underline" 
+                        [routerLinkActiveOptions]="{exact: true}"
+                        (click)="isMenuCollapsed = true">
+                            {{item.text}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
