@@ -5,7 +5,7 @@
             <div class="checkbox-wrapper">
                 <input #canActivateSwitch type="checkbox" class="checkbox" [checked]="canActivate"
                     (change)="canActivateChange(canActivateSwitch.checked)" id="canActivateSwitch" />
-                Off <label for="canActivateSwitch" class="toggle"></label> On
+                Off <label for="canActivateSwitch" class="toggle flex-shrink-0"></label> On
                 <p class="m-0">&#9001;-- Toggle canActivate guard of "Main Page"</p>
             </div>
             <hr />
@@ -24,7 +24,7 @@
             <div class="checkbox-wrapper">
                 <input #canDeactivateSwitch type="checkbox" class="checkbox" [checked]="canDeactivate"
                     (change)="canDeactivateChange(canDeactivateSwitch.checked)" id="canDeactivateSwitch" />
-                Off <label for="canDeactivateSwitch" class="toggle"></label> On
+                Off <label for="canDeactivateSwitch" class="toggle flex-shrink-0"></label> On
                 <p class="m-0">&#9001;-- Toggle canDeactivate guard of "Angular routing"</p>
             </div>
             <hr />
@@ -43,7 +43,7 @@
             <div class="checkbox-wrapper">
                 <input #canActivateChildSwitch type="checkbox" class="checkbox" [checked]="canActivateChild"
                     (change)="canActivateChildChange(canActivateChildSwitch.checked)" id="canActivateChildSwitch" />
-                Off <label for="canActivateChildSwitch" class="toggle"></label> On
+                Off <label for="canActivateChildSwitch" class="toggle flex-shrink-0"></label> On
                 <p class="m-0">&#9001;-- Toggle canActivateChild guard of "Angular routing"</p>
             </div>
             <hr />
@@ -59,7 +59,7 @@
             <div class="checkbox-wrapper">
                 <input #canLoadSwitch type="checkbox" class="checkbox" [checked]="canLoad"
                     (change)="canLoadChange(canLoadSwitch.checked)" id="canLoadSwitch" />
-                Off <label for="canLoadSwitch" class="toggle"></label> On
+                Off <label for="canLoadSwitch" class="toggle flex-shrink-0"></label> On
                 <p class="m-0">&#9001;-- Toggle canLoad guard of "Welcome" module</p>
             </div>
             <hr />

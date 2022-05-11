@@ -1,3 +1,32 @@
 <div class="container">
-    <p>animations works!</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Animation control panel</h2>
+            <div class="d-flex flex-wrap gap-4">
+                <button class="btn btn-primary" (click)="setState('default')">
+                    State default
+                </button>
+                <button class="btn btn-primary" (click)="setState('small')">
+                    State small
+                </button>
+                <button class="btn btn-primary" (click)="setState('big')">
+                    State big
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Animation targets</h2>
+            <div class="animation-target" [@transform]="state"></div>
+            <hr>
+            <ul class="mt-4">
+                <li class="list-item mb-2" *ngFor="let item of list" [@enterAndLeave]="'enter'">
+                    {{item.id}}
+                    <button class="ms-2" (click)="removeItem(item.id)">X</button>
+                </li>
+            </ul>
+            <button class="btn btn-success" (click)="addItem()">
+                Add item
+            </button>
+        </div>
+    </div>
 </div>

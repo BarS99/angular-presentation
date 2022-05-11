@@ -54,7 +54,7 @@ export class AppGuard implements CanActivate, CanActivateChild, CanDeactivate<un
       const canLoad: boolean = this.routeService.canLoad$.getValue();
 
       if (!canLoad) {
-        alert("Sorry! \"canLoad\" switch is off, thus you can't leave load the module!.");
+        alert("Sorry! \"canLoad\" switch is off, thus you can't load the module!.");
       }
 
     return canLoad;

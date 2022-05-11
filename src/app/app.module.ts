@@ -9,6 +9,7 @@ import { AnimationsComponent } from './feature/components/animations/animations.
 import { RouteComponent } from './feature/components/route/route.component';
 import { Page404Component } from './feature/components/page404/page404.component';
 import { RouteChildComponent } from './feature/components/route-child/route-child.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouteChildComponent } from './feature/components/route-child/route-chil
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
   ],
